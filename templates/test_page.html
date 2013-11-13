@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test page</title>
+    {% block css %}
+    <link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/demo.css" />
+    {% endblock %}
+</head>
+<body>
+    <div class="body">
+        <h1>Artwork</h1>
+        <div id="artwork_zone" class="drop_zone">
+            <div class="left">
+                <span class="text">
+                    Drop zone
+                </span>
+                <div class="progress_bar"></div>
+            </div>
+            <div class="right">
+                <span class="text">
+                    Preview
+                </span>
+            </div>
+            <div class="clear_fix"></div>
+        </div>
+        <br/>
+        <br/>
+        <h1>Proof</h1>
+        <div id="proof_zone" class="drop_zone">
+            <div class="left">
+                <span class="text">
+                    Drop zone
+                </span>
+                <div class="progress_bar"></div>
+            </div>
+            <div class="right">
+                <span class="text">
+                    Preview
+                </span>
+            </div>
+            <div class="clear_fix"></div>
+        </div>
+    </div>
+</body>
+{% block js %}
+<script src="{{ STATIC_URL }}js/jquery-1.9.1.js"></script>
+<script src="{{ STATIC_URL }}js/jquery.custom.plugin.js"></script>
+<script src="{{ STATIC_URL }}js/filedrop.js"></script>
+<script src="{{ STATIC_URL }}js/demo.js"></script>
+{% endblock %}
+</html>
